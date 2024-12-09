@@ -39,7 +39,7 @@
 %global debug_package %{nil}
 
 # build for Triton version, see cmake/llvm-hash.txt for LLVM commit hash.
-%global triton_ver 2.3.1
+%global triton_ver 5.0.0
 
 %if "%{triton_ver}" == "2.1.0"
   # PyTorch 2.3.1 ROCm build with aotriton 0.4.1b
@@ -57,6 +57,12 @@
 %elif "%{triton_ver}" == "3.0.0"
   %global triton_name aotriton
   %global llvm_commit 10dc3a8e916d73291269e5e2b82dd22681489aa1
+  %global maj_ver 19
+  %global min_ver 0
+  %global patch_ver 0
+%elif "%{triton_ver}" == "5.0.0"
+  %global triton_name aotriton
+  %global llvm_commit 657ec7320d8a28171755ba0dd5afc570a5a16791
   %global maj_ver 19
   %global min_ver 0
   %global patch_ver 0
